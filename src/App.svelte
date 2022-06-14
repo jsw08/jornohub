@@ -12,10 +12,13 @@
     if (i) 
       switch(i) {
         case "gonewild":
-          load({detail:{type: "custom",subreddit:["nsfw","gonewild"]}})
-        
+          load({"detail":{"type":"custom","sub":["nsfw","superhotteens"]}});
+          break;
         case "pokeporn":
-          load({detail:{type:"custom", subreddit:["pokeporn",]}})
+          load({"detail":{"type":"custom", "subreddit":["pokeporn",]}})
+          break;
+        default:
+          alert("No vaild input.")
       }
   }; 
 
