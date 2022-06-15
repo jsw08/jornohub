@@ -30,9 +30,9 @@ window.addEventListener("keypress", function (e) {
 })
 </script>
 
-<!-- {#each imgs as i}
+{#each imgs as i}
 <img src={i.img} style:display="none" alt="Img prefetcher"/>
-{/each} -->
+{/each}
 
 <div>
   <a href={currentImg.postLink}>{currentImg.title}</a>
