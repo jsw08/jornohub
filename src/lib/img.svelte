@@ -4,20 +4,17 @@ import { createEventDispatcher } from 'svelte';
 const dispatch = createEventDispatcher();
 
 let cImgN = 0
+let canclick = true
 $: currentImg = imgs[cImgN]
 
 const btn = (btn) => {
-  if (btn) {
-    if (imgs[cImgN -1] == undefined) {
-    } else {
-        cImgN = cImgN - 1
-      }
-  } else {
-    if (imgs[cImgN +1] == undefined) {
-    } else {
-      cImgN = cImgN + 1
-      dispatch('more')
-    }
+  if (canclick) {
+    canclick = false
+    if (btn && imgs[cImgN -1] !== undefined)
+      cImgN--
+    else if (!btn && imgs[cImgN +1] !== undefined)
+      cImgN++; dispatch('more')
+    setTimeout(() => {canclick = true}, 2000)
   }
 }
 
