@@ -12,8 +12,10 @@
     if (i) 
       switch(i) {
         case "gonewild":
-          load({"detail":{"type":"custom","sub":["nsfw","superhotteens"]}});
+          load({"detail":{"type":"custom","sub":["nsfw","superhotteens","gonewild18"]}});
           break;
+        case "goneteens":
+          load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn"]}})
         case "pokeporn":
           load({"detail":{"type":"custom", "sub":["pokeporn"]}})
           break;
