@@ -15,7 +15,7 @@
           load({"detail":{"type":"custom","sub":["nsfw","superhotteens"]}});
           break;
         case "pokeporn":
-          load({"detail":{"type":"custom", "subreddit":["pokeporn",]}})
+          load({"detail":{"type":"custom", "sub":["pokeporn"]}})
           break;
         default:
           alert("No vaild input.")
