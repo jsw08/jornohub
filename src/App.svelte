@@ -16,6 +16,7 @@
           break;
         case "goneteens":
           load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn"]}})
+          break;
         case "pokeporn":
           load({"detail":{"type":"custom", "sub":["pokeporn"]}})
           break;
