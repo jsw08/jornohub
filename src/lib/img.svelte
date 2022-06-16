@@ -14,7 +14,7 @@ const btn = (btn) => {
       cImgN--
     else if (!btn && imgs[cImgN +1] !== undefined)
       cImgN++; dispatch('more')
-    setTimeout(() => {canclick = true}, 2000)
+    setTimeout(() => {canclick = true}, 500)
   }
 }
 
