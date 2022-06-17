@@ -2,6 +2,7 @@
   import Img from './lib/img.svelte'
   import Start from './lib/start.svelte'
   import RedditImageFetcher from "reddit-image-fetcher";
+  // ../node_modules/svelte-gamepad/src/Gamepad.svelte
 
   let chosen = false
   let startthings;

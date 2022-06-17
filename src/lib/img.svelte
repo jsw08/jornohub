@@ -1,6 +1,7 @@
 <script>
 export let imgs = [{title:"No available images.",image:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftacm.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fno-image-available.jpeg"}]
 import { createEventDispatcher } from 'svelte';
+import Gamepad from "../../node_modules/svelte-gamepad/src/Gamepad.svelte";
 const dispatch = createEventDispatcher();
 
 let cImgN = 0
@@ -30,6 +31,12 @@ window.addEventListener("keypress", function (e) {
 {#each imgs as i}
 <img src={i.img} style:display="none" alt="Img prefetcher"/>
 {/each}
+
+<Gamepad
+  gamepadIndex={0}
+  on:DPadUp={() => {btn(false)}}
+  on:DPadDown={() => {btn(true)}}
+/>
 
 <div>
   <a href={currentImg.postLink}>{currentImg.title}</a>
