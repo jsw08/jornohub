@@ -33,9 +33,8 @@
       total: 10,
       subreddit: e.detail.sub
     }).then(result => {
-        console.log(result);
-        imgs = result
-        chosen=true
+      imgs = result
+      chosen=true
     });
   }
 
@@ -45,8 +44,12 @@
       total: 1,
       subreddit: startthings.sub
     }).then(result => {
-      imgs.push(result[0])
-      imgs = imgs
+      if (!imgs.includes(result[0])) {
+        imgs.push(result[0])
+        imgs = imgs
+      } else {
+        more()
+      }
     })
   }
 </script>

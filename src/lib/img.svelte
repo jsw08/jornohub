@@ -36,6 +36,8 @@ window.addEventListener("keypress", function (e) {
   gamepadIndex={0}
   on:DPadUp={() => {btn(false)}}
   on:DPadDown={() => {btn(true)}}
+  on:LB={() => {btn(false)}}
+  on:LT={() => {btn(true)}}
 />
 
 <div>
