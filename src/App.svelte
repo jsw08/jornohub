@@ -13,20 +13,20 @@
     if (i) 
       switch(i) {
         case "gonewild":
-          load({"detail":{"type":"custom","sub":["nsfw","superhotteens","gonewild18"]}});
+          load({"detail":{"type":"custom","sub":["nsfw","superhotteens","gonewild18"]}}, true);
           break;
         case "goneteens":
-          load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn"]}})
+          load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn"]}}, true)
           break;
         case "pokeporn":
-          load({"detail":{"type":"custom", "sub":["pokeporn"]}})
+          load({"detail":{"type":"custom", "sub":["pokeporn"]}}, true)
           break;
         default:
           alert("No vaild input.")
       }
   }; 
 
-  const load = (e) => {
+  const load = (e, nsfw=false) => {
     startthings = e.detail;
     RedditImageFetcher.fetch({
       type: e.detail.type,
@@ -47,6 +47,7 @@
       if (!imgs.includes(result[0])) {
         imgs.push(result[0])
         imgs = imgs
+        if (nsfw) imgs[0] = {"title":"U BE HORNY","postLink":"about:blank","image":"https://c.tenor.com/G-hXJ8T-vqAAAAAC/tenor.gif"}
       } else {
         more()
       }
