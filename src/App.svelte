@@ -15,8 +15,8 @@
         case "gonewild":
           load({"detail":{"type":"custom","sub":["nsfw","superhotteens","gonewild18"]}}, true);
           break;
-        case "goneteens":
-          load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn"]}}, true)
+        case "tudes":
+          load({"detail":{"type":"custom","sub":["superhotteens","gonewild18","legalteens","teenhdporn","perfectbody","smallcutie","petitetits","adorablenudes"]}}, true)
           break;
         case "pokeporn":
           load({"detail":{"type":"custom", "sub":["pokeporn"]}}, true)
