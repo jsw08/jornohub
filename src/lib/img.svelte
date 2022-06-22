@@ -44,6 +44,7 @@ window.addEventListener("keypress", function (e) {
   <a href={currentImg.postLink}>{currentImg.title}</a>
   <br>
   <img on:click={() => {location.assign(currentImg.postLink)}} src={currentImg.image} alt={currentImg.title}/>
+  <p>r/{currentImg.subreddit}</p>
   <button style:left="5px" on:click={() => {btn(true)}}>	
   &#8592;</button>
   <button style:right="5px"  on:click={() => btn(false)}>	
@@ -61,6 +62,8 @@ img {
   min-height: 30vh;
   border-radius: 13px;
   cursor: pointer;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 button {
   margin: 0;
@@ -72,5 +75,8 @@ button {
   margin-bottom: 1;
   font-size: 18pt;
   color:white;
+}
+p {
+  font-size: 10pt;
 }
 </style>
