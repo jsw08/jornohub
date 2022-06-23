@@ -12,6 +12,6 @@ const dispatch = createEventDispatcher();
 
 <div style:display="grid" style:grid-gaps="3px" style:font-size="20pt">
   <a href="#uClickedOmgWOW" on:click={() => {dispatch('load',{type:'memes'})}}>Memes</a>
-  <a href="##uClickedOmgWOW" on:click={() => {dispatch('load', {type:'custom', sub:['eyeblech']})}}>Eyeblech</a>
-  <a href="##uClickedOmgWOW" on:click={() => {dispatch('nsfw')}}>Custom NSFW</a>
+  <a href="#uClickedOmgWOW" on:click={() => {dispatch('load', {type:'custom', sub:['eyeblech']})}}>Eyeblech</a>
+  <a href="#uClickedOmgWOW" on:click={() => {dispatch('nsfw')}}>NSFW</a>
 </div>

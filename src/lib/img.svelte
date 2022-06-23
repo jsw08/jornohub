@@ -1,5 +1,7 @@
 <script>
 export let imgs = [{title:"No available images.",image:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftacm.com%2Fwp-content%2Fuploads%2F2018%2F01%2Fno-image-available.jpeg"}]
+export let nsfw;
+export let spoil
 import { createEventDispatcher } from 'svelte';
 import Gamepad from "../../node_modules/svelte-gamepad/src/Gamepad.svelte";
 const dispatch = createEventDispatcher();
@@ -7,6 +9,7 @@ const dispatch = createEventDispatcher();
 let cImgN = 0
 let canclick = true
 $: currentImg = imgs[cImgN]
+
 
 const btn = (btn) => {
   if (canclick) {
@@ -41,10 +44,14 @@ window.addEventListener("keypress", function (e) {
 />
 
 <div>
+  {#if !nsfw && !currentImg.NSFW || nsfw && currentImg.NSFW || !spoil && !currentImg.spoiler || spoil && currentImg.spoiler}
   <a href={currentImg.postLink}>{currentImg.title}</a>
   <br>
   <img on:click={() => {location.assign(currentImg.postLink)}} src={currentImg.image} alt={currentImg.title}/>
   <p>r/{currentImg.subreddit}</p>
+  {:else}
+  <h3>NSFW</h3>
+  {/if}
   <button style:left="5px" on:click={() => {btn(true)}}>	
   &#8592;</button>
   <button style:right="5px"  on:click={() => btn(false)}>	
