@@ -8,7 +8,6 @@
   let chosen = false
   let startthings;
   let cNsfw = false
-  let cSpoil = false
   $: imgs = []
 
   const nsfw = () => {
@@ -63,12 +62,8 @@
   <input bind:checked={cNsfw} id="c" type="checkbox">
   <label for="c">nsfw</label>
 </div>
-<div style:right="5px" style:top="5px" style:position="absolute">
-  <label for="cc">spoilers (WIP)</label>
-  <input disabled bind:checked={cSpoil} id="cc" type="checkbox">
-</div>
 {#if chosen}
-  <Img imgs={imgs} nsfw={cNsfw}  spoil={cSpoil} on:more={more}/>
+  <Img imgs={imgs} nsfw={cNsfw}  on:more={more}/>
   <button on:click={() => {location.reload()}} style:position="absolute" style:left="5px" style:bottom="5px">Home</button>
 {:else}
   <Start on:nsfw={nsfw} on:load={load}/>
