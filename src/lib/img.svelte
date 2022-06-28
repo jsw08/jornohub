@@ -43,13 +43,13 @@ window.addEventListener("keypress", function (e) {
 />
 
 <div>
-  {#if !nsfw && !currentImg.NSFW || nsfw && currentImg.NSFW}
+  {#if !nsfw && currentImg.NSFW}
+  <h3>NSFW</h3>
+  {:else}
   <a href={currentImg.postLink}>{currentImg.title}</a>
   <br>
   <img on:click={() => {location.assign(currentImg.postLink)}} src={currentImg.image} alt={currentImg.title}/>
   <p>r/{currentImg.subreddit}</p>
-  {:else}
-  <h3>NSFW</h3>
   {/if}
   <button style:left="5px" on:click={() => {btn(true)}}>	
   &#8592;</button>
